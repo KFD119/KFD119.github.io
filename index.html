@@ -79,20 +79,41 @@
     .footer-left div {
       line-height: 1.4;
     }
-    .footer-links {
-      display: flex;
-      gap: 10px;
+    /* タップで開くボタン */
+    .footer-right {
+      position: relative;
     }
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
+    .menu-button {
       background: rgba(0,0,0,0.1);
       padding: 4px 8px;
       border-radius: 4px;
+      color: white;
+      cursor: pointer;
     }
-    .footer-links a:hover {
+    .menu-button:hover {
       background: rgba(0,0,0,0.2);
+    }
+    .footer-menu {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      background: white;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .footer-menu a {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+    }
+    .footer-menu a:hover {
+      background: #f0f0f0;
     }
 
     /* スマホ用スタイル */
@@ -116,11 +137,8 @@
       footer {
         font-size: 12px;
         padding: 8px;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-      }
-      .footer-links {
-        margin-top: 5px;
       }
     }
   </style>
@@ -151,13 +169,23 @@
         他者への公開等、情報の取扱いに注意してください。
       </div>
     </div>
-    <div class="footer-links">
-      <a href="#">ページトップ</a>
-      <a href="video.html">研修動画</a>
-      <a href="docs.html">研修資料</a>
-      <a href="archive.html">研修会アーカイブ</a>
+    <div class="footer-right">
+      <div class="menu-button" onclick="toggleMenu()">タップで開く</div>
+      <div class="footer-menu" id="footerMenu">
+        <a href="#">ページトップ</a>
+        <a href="video.html">研修動画</a>
+        <a href="docs.html">研修資料</a>
+        <a href="archive.html">研修会アーカイブ</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('footerMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 
 </body>
 </html>
