@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>救急担当学習掲示板</title>
-  <!-- Font Awesome 読み込み（YouTube用） -->
+  <!-- Font Awesome 読み込み（YouTube用・注意アイコン用） -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
       background-color: #f7f7f7;
+      padding-bottom: 70px; /* フッター分の余白 */
     }
     header {
       background-color: #87cefa; /* 水色 */
@@ -46,6 +47,29 @@
       text-align: center;
       font-size: 18px;
     }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #87cefa; /* ヘッダーと同じ水色 */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border-top: 2px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    footer i {
+      color: #d32f2f; /* 赤系の注意マーク */
+    }
+    footer div {
+      line-height: 1.4;
+    }
 
     /* スマホ用スタイル */
     @media (max-width: 600px) {
@@ -64,6 +88,10 @@
       .notice {
         font-size: 16px;
         padding: 15px;
+      }
+      footer {
+        font-size: 12px;
+        padding: 8px;
       }
     }
   </style>
@@ -85,6 +113,14 @@
       📢 現在、お知らせはありません
     </div>
   </main>
+
+  <footer>
+    <i class="fa fa-exclamation-triangle"></i>
+    <div>
+      職員内での情報管理ツールです。<br>
+      他者への公開等、情報の取扱いに注意してください。
+    </div>
+  </footer>
 
 </body>
 </html>
