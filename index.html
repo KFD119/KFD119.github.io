@@ -95,6 +95,34 @@
       line-height: 1.4;
     }
 
+    /* 右下のナビボタン */
+    .quick-nav {
+      position: fixed;
+      right: 10px;
+      bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+    .quick-nav a {
+      background: #87cefa;
+      color: white;
+      text-decoration: none;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 18px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+    .quick-nav a:hover {
+      background: #5dbbe3;
+    }
+
     /* スマホ対応 */
     @media (max-width: 600px) {
       header {
@@ -123,20 +151,20 @@
 <body>
 
   <!-- ヘッダー -->
-  <header>
+  <header id="top">
     （仮）救急担当学習掲示板
   </header>
 
   <!-- 本文 -->
   <main>
     <div class="menu">
-      <a href="#" target="_blank">
+      <a id="video" href="#" target="_blank">
         <h2>研修動画 <i class="fa fa-youtube-play"></i></h2>
       </a>
-      <a href="#" target="_blank">
+      <a id="docs" href="#" target="_blank">
         <h2>研修資料 <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" alt="Google Drive" class="drive-icon"></h2>
       </a>
-      <a href="#" target="_blank">
+      <a id="archive" href="#" target="_blank">
         <h2>研修会アーカイブ <i class="fa fa-youtube-play"></i></h2>
       </a>
     </div>
@@ -145,6 +173,14 @@
       📢 現在、お知らせはありません
     </div>
   </main>
+
+  <!-- 右下ナビ -->
+  <div class="quick-nav">
+    <a href="#top" title="ページトップ"><i class="fa fa-arrow-up"></i></a>
+    <a href="#video" title="研修動画"><i class="fa fa-youtube-play"></i></a>
+    <a href="#docs" title="研修資料"><i class="fa fa-file-text"></i></a>
+    <a href="#archive" title="研修会アーカイブ"><i class="fa fa-history"></i></a>
+  </div>
 
   <!-- フッター -->
   <footer>
