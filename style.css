@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  padding-bottom: 70px; /* フッター分 */
+}
+
+header {
+  background-color: #87cefa;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 28px;
+}
+
+main {
+  padding: 20px;
+}
+
+.menu h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notice {
+  margin: 30px auto;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border: 2px solid #87cefa;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 箇条書きリンク */
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+.link-list li {
+  margin: 10px 0;
+}
+.link-list a {
+  text-decoration: none;
+  color: #007acc;
+}
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+/* 横並びナビ */
+.quick-nav-horizontal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #87cefa;
+  padding: 5px 10px;
+  display: flex;
+  gap: 10px;
+}
+.quick-nav-horizontal a {
+  color: white;
+  font-size: 20px;
+}
+
+/* フッター */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 150px);
+  background: #87cefa;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+footer i {
+  color: #d32f2f;
+}
