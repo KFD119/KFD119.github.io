@@ -3,35 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>研修会アーカイブ</title>
-  <link rel="stylesheet" href="style.css">
+  <title>研修会アーカイブ - 救急担当学習掲示板</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body { margin:0; font-family:sans-serif; background:#f7f7f7; padding-bottom:80px; }
+    header { background:#87cefa; color:white; padding:20px 10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    .title { font-size:28px; font-weight:bold; }
+    .header-menu { display:none; flex-direction:column; gap:5px; background:#87cefa; padding:10px; width:100%; }
+    .header-menu a { color:white; text-decoration:none; font-weight:bold; padding:8px 0; }
+    .header-menu a:hover { text-decoration:underline; }
+    .toggle-btn { background:#4682b4; color:white; border:none; padding:5px 10px; cursor:pointer; font-size:18px; border-radius:4px; }
+    .header-menu.open { display:flex; }
+    main { padding:20px; }
+    ul { list-style-type:none; padding-left:0; }
+    ul li { margin:12px 0; font-size:20px; font-weight:bold; }
+    ul li a { color:#333; text-decoration:none; }
+    ul li a:hover { text-decoration:underline; }
+    footer { position:fixed; bottom:0; left:0; width:100%; background:#87cefa; color:white; padding:10px; font-size:14px; font-weight:bold; border-top:2px solid #ccc; }
+    footer .left { display:flex; gap:8px; align-items:flex-start; }
+    footer .left i { color:#d32f2f; margin-top:2px; }
+    footer .left div { line-height:1.4; }
+  </style>
 </head>
 <body>
 
-<header>研修会アーカイブ</header>
+<header>
+  <div class="title">救急担当学習掲示板</div>
+  <button class="toggle-btn">☰</button>
+  <div class="header-menu">
+    <a href="index.html">ページトップ</a>
+    <a href="video.html">研修動画</a>
+    <a href="docs.html">研修資料</a>
+    <a href="archive.html">研修会アーカイブ</a>
+  </div>
+</header>
 
 <main>
-  <ul class="link-list">
-    <li><a href="https://www.youtube.com/zzzz" target="_blank">アーカイブ1</a></li>
-    <li><a href="https://www.youtube.com/aaaa" target="_blank">アーカイブ2</a></li>
+  <h2>研修会アーカイブ一覧</h2>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=ZZZZ" target="_blank">2024年4月 救急対応研修会 <i class="fa fa-youtube-play" style="color:red;"></i></a></li>
+    <li><a href="https://www.youtube.com/watch?v=WWWW" target="_blank">2024年6月 救急対応研修会 <i class="fa fa-youtube-play" style="color:red;"></i></a></li>
   </ul>
 </main>
 
-<div class="quick-nav-horizontal">
-  <a href="index.html"><i class="fa fa-home"></i></a>
-  <a href="video.html"><i class="fa fa-youtube-play"></i></a>
-  <a href="docs.html"><i class="fa fa-file-text"></i></a>
-  <a href="archive.html"><i class="fa fa-history"></i></a>
-</div>
-
 <footer>
-  <i class="fa fa-exclamation-triangle"></i>
-  <div>
-    職員内での情報管理ツールです。<br>
-    他者への公開等、情報の取扱いに注意してください。
+  <div class="left">
+    <i class="fa fa-exclamation-triangle"></i>
+    <div>
+      職員内での情報管理ツールです。<br>
+      他者への公開等、情報の取扱いに注意してください。
+    </div>
   </div>
 </footer>
+
+<script>
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const menu = document.querySelector('.header-menu');
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
