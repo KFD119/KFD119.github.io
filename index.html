@@ -3,28 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>救急車背景のヘッダー</title>
+  <title>救急担当学習掲示板</title>
   <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f7f7f7; /* 背景を少し薄いグレーに */
+    }
     header {
-      background-image: url("https://illustimage.com/photo/6820.png"); /* 救急車画像 */
-      background-size: cover;       /* 画像をヘッダー幅に合わせる */
-      background-position: center;  /* 中央に配置 */
-      color: white;                  /* 文字色 */
-      padding: 60px 20px;             /* 上下左右の余白 */
+      background-color: #87cefa; /* 水色 */
+      color: white;
+      padding: 40px 20px;
       text-align: center;
       font-size: 32px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 文字を見やすくする影 */
+    }
+    main {
+      padding: 20px;
+    }
+    .menu h2 {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+    .notice {
+      margin: 40px auto;
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      border: 2px solid #87cefa;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    🚑 救急車のページ
+    （仮）救急担当学習掲示板
   </header>
 
   <main>
-    <p>ここに本文が入ります。</p>
+    <div class="menu">
+      <h2>研修動画</h2>
+      <h2>研修資料</h2>
+      <h2>研修会アーカイブ</h2>
+    </div>
+
+    <div class="notice">
+      📢 現在、お知らせはありません
+    </div>
   </main>
 
 </body>
