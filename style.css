@@ -1,87 +1,115 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #f7f7f7;
-  padding-bottom: 70px; /* フッター分 */
+  background: #f7f7f7;
+  padding-bottom: 80px;
 }
 
 header {
-  background-color: #87cefa;
+  background: #87cefa;
   color: white;
-  padding: 30px 10px;
-  text-align: center;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
   font-size: 28px;
+  font-weight: bold;
+}
+
+.header-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: #87cefa;
+  padding: 10px;
+  width: 100%;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.header-menu a:hover {
+  text-decoration: underline;
+}
+
+.toggle-btn {
+  background: #4682b4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.header-menu.open {
+  display: flex;
 }
 
 main {
   padding: 20px;
 }
 
-.menu h2 {
-  margin: 10px 0;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 12px 0;
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-weight: bold;
 }
 
-.notice {
-  margin: 30px auto;
-  max-width: 600px;
-  background: white;
-  padding: 20px;
-  border: 2px solid #87cefa;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
-}
-
-/* 箇条書きリンク */
-.link-list {
-  list-style: none;
-  padding: 0;
-}
-.link-list li {
-  margin: 10px 0;
-}
-.link-list a {
+ul li a {
+  color: #333;
   text-decoration: none;
-  color: #007acc;
 }
-.link-list a:hover {
+
+ul li a:hover {
   text-decoration: underline;
 }
 
-/* 横並びナビ */
-.quick-nav-horizontal {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background: #87cefa;
-  padding: 5px 10px;
-  display: flex;
-  gap: 10px;
-}
-.quick-nav-horizontal a {
-  color: white;
-  font-size: 20px;
+.notice {
+  border: 2px solid red;
+  padding: 10px;
+  background: #fff0f0;
+  margin: 20px 0;
+  font-size: 18px;
 }
 
-/* フッター */
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: calc(100% - 150px);
+  width: 100%;
   background: #87cefa;
   color: white;
   padding: 10px;
   font-size: 14px;
   font-weight: bold;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  border-top: 2px solid #ccc;
 }
-footer i {
+
+footer .left {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+footer .left i {
   color: #d32f2f;
+  margin-top: 2px;
+}
+
+footer .left div {
+  line-height: 1.4;
 }
