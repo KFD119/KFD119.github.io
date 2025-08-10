@@ -4,109 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>救急担当学習掲示板</title>
-  <!-- Font Awesome 読み込み -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f7f7f7;
-      padding-bottom: 70px; /* フッター分の余白 */
-    }
-    header {
-      background-color: #87cefa; /* 水色 */
-      color: white;
-      padding: 30px 10px;
-      text-align: center;
-      font-size: 28px;
-    }
-    main {
-      padding: 20px;
-    }
-    .menu h2 {
-      margin: 10px 0;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .menu i {
-      color: red; /* YouTubeアイコンの色 */
-    }
-    .drive-icon {
-      width: 20px;
-      height: 20px;
-    }
-    .notice {
-      margin: 30px auto;
-      max-width: 600px;
-      background: white;
-      padding: 20px;
-      border: 2px solid #87cefa;
-      border-radius: 8px;
-      text-align: center;
-      font-size: 18px;
-    }
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #87cefa;
-      color: white;
-      padding: 10px;
-      font-size: 14px;
-      font-weight: bold;
-      border-top: 2px solid #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 8px;
-      z-index: 998;
-    }
-    footer i {
-      color: #d32f2f; /* 注意マークの赤 */
-      margin-top: 2px;
-    }
-    footer div {
-      line-height: 1.4;
-    }
+</head>
+<body>
 
-    /* 横並びナビ */
-    .quick-nav-horizontal {
-      position: fixed;
-      bottom: 60px; /* フッター上に配置 */
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 12px;
-      background: #87cefa;
-      padding: 8px 15px;
-      border-radius: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-    .quick-nav-horizontal a {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: background 0.3s;
-    }
-    .quick-nav-horizontal a:hover {
-      background: #5dbbe3;
-    }
+<header>（仮）救急担当学習掲示板</header>
 
-    /* スマホ用スタイル */
-    @media (max-width: 600px) {
-      header {
-        font-size: 22px;
-        padding: 20px 5px;
-      }
-      .menu h2 {
-        font-
+<main>
+  <div class="menu">
+    <h2><a href="video.html">研修動画 <i class="fa fa-youtube-play"></i></a></h2>
+    <h2><a href="docs.html">研修資料 <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" width="20"></a></h2>
+    <h2><a href="archive.html">研修会アーカイブ <i class="fa fa-youtube-play"></i></a></h2>
+  </div>
+
+  <div class="notice">📢 現在、お知らせはありません</div>
+</main>
+
+<!-- 横並びナビ -->
+<div class="quick-nav-horizontal">
+  <a href="index.html" title="トップページ"><i class="fa fa-home"></i></a>
+  <a href="video.html" title="研修動画"><i class="fa fa-youtube-play"></i></a>
+  <a href="docs.html" title="研修資料"><i class="fa fa-file-text"></i></a>
+  <a href="archive.html" title="研修会アーカイブ"><i class="fa fa-history"></i></a>
+</div>
+
+<footer>
+  <i class="fa fa-exclamation-triangle"></i>
+  <div>
+    職員内での情報管理ツールです。<br>
+    他者への公開等、情報の取扱いに注意してください。
+  </div>
+</footer>
+
+</body>
+</html>
