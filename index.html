@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ヘッダー色変更</title>
+  <title>救急車背景のヘッダー</title>
   <style>
     header {
-      background-color: #3b5998; /* 背景色（ここを好きな色に） */
-      color: white;              /* 文字色 */
-      padding: 20px;
+      background-image: url("https://illustimage.com/photo/6820.png"); /* 救急車画像 */
+      background-size: cover;       /* 画像をヘッダー幅に合わせる */
+      background-position: center;  /* 中央に配置 */
+      color: white;                  /* 文字色 */
+      padding: 60px 20px;             /* 上下左右の余白 */
       text-align: center;
-      font-size: 24px;
+      font-size: 32px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* 文字を見やすくする影 */
     }
   </style>
 </head>
 <body>
 
   <header>
-    ここはヘッダーです
+    🚑 救急車のページ
   </header>
 
   <main>
-    <p>本文の内容がここに入ります。</p>
+    <p>ここに本文が入ります。</p>
   </main>
 
 </body>
