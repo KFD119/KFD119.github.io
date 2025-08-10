@@ -5,25 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>研修資料 - 救急担当学習掲示板</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body { margin:0; font-family:sans-serif; background:#f7f7f7; padding-bottom:80px; }
-    header { background:#87cefa; color:white; padding:20px 10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-    .title { font-size:28px; font-weight:bold; }
-    .header-menu { display:none; flex-direction:column; gap:5px; background:#87cefa; padding:10px; width:100%; }
-    .header-menu a { color:white; text-decoration:none; font-weight:bold; padding:8px 0; }
-    .header-menu a:hover { text-decoration:underline; }
-    .toggle-btn { background:#4682b4; color:white; border:none; padding:5px 10px; cursor:pointer; font-size:18px; border-radius:4px; }
-    .header-menu.open { display:flex; }
-    main { padding:20px; }
-    ul { list-style-type:none; padding-left:0; }
-    ul li { margin:12px 0; font-size:20px; font-weight:bold; }
-    ul li a { color:#333; text-decoration:none; }
-    ul li a:hover { text-decoration:underline; }
-    footer { position:fixed; bottom:0; left:0; width:100%; background:#87cefa; color:white; padding:10px; font-size:14px; font-weight:bold; border-top:2px solid #ccc; }
-    footer .left { display:flex; gap:8px; align-items:flex-start; }
-    footer .left i { color:#d32f2f; margin-top:2px; }
-    footer .left div { line-height:1.4; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -39,10 +21,10 @@
 </header>
 
 <main>
-  <h2>研修資料一覧</h2>
+  <h2>研修資料</h2>
   <ul>
-    <li><a href="https://drive.google.com/file/d/XXXX/view" target="_blank">救急対応マニュアル（PDF） <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" style="width:20px; height:20px; vertical-align:middle;"></a></li>
-    <li><a href="https://drive.google.com/file/d/YYYY/view" target="_blank">応急処置資料（PPT） <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" style="width:20px; height:20px; vertical-align:middle;"></a></li>
+    <li><a href="https://drive.google.com/" target="_blank">救急対応マニュアル <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" style="width:20px; height:20px; vertical-align:middle;"></a></li>
+    <li><a href="https://drive.google.com/" target="_blank">チェックリスト <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" style="width:20px; height:20px; vertical-align:middle;"></a></li>
   </ul>
 </main>
 
@@ -59,4 +41,10 @@
 <script>
   const toggleBtn = document.querySelector('.toggle-btn');
   const menu = document.querySelector('.header-menu');
-  toggleBtn.addEventListener('cli
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
