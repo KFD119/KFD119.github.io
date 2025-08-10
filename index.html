@@ -4,38 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>救急担当学習掲示板</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome 読み込み -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      padding-bottom: 70px; /* フッター分の余白 */
+    }
+    header {
+      background-color: #87cefa; /* 水色 */
+      color: white;
+      padding: 30px 10px;
+      text-align: center;
+      font-size: 32px; /* 大きく */
+      font-weight: bold; /* 太く */
+    }
+    main {
+      padding: 20px;
+    }
+    .menu h2 {
+      margin: 10px 0;
+      font-size: 22px; /* 少し大きく */
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .menu i {
+      color: red; /* YouTubeアイコンの色 */
+    }
+    .drive-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .notice {
+      margin: 30px auto;
+      max-width: 600px;
+      background: #ffe6e6; /* 薄いピンク背景 */
+      padding: 20px;
+      border: 2px solid #d32f2f; /* 赤い枠 */
+      border-radius: 8px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #b71c1c; /* 濃い赤文字 */
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #87cefa; /* ヘッダーと同じ水色 */
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border-top: 2px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .footer-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .footer-left i {
+      color: #d32f2f; /* 赤系の注意マーク */
+      margin-top: 2px;
+    }
+    .footer-left div {
+      line-height: 1.4;
+    }
+    .footer-links {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      background: rgba(0,0,0,0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .footer-links a:hover {
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* スマホ用スタイル */
+    @media (max-width: 600px) {
+      header {
+        font-size: 26px;
+        padding: 20px 5px;
+      }
+      .menu h2 {
+        font-size: 18px;
+        gap: 6px;
+      }
+      .drive-icon {
+        width: 18px;
+        height: 18px;
+      }
+      .notice {
+        font-size: 16px;
+        padding: 15px;
+      }
+      footer {
+        font-size: 12px;
+        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-links {
+        margin-top: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>（仮）救急担当学習掲示板</header>
+  <header>
+    救急担当学習掲示板
+  </header>
 
-<main>
-  <div class="menu">
-    <h2><a href="video.html">研修動画 <i class="fa fa-youtube-play"></i></a></h2>
-    <h2><a href="docs.html">研修資料 <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" width="20"></a></h2>
-    <h2><a href="archive.html">研修会アーカイブ <i class="fa fa-youtube-play"></i></a></h2>
-  </div>
+  <main>
+    <div class="menu">
+      <h2><a href="video.html">研修動画</a> <i class="fa fa-youtube-play"></i></h2>
+      <h2><a href="docs.html">研修資料</a> <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" alt="Google Drive" class="drive-icon"></h2>
+      <h2><a href="archive.html">研修会アーカイブ</a> <i class="fa fa-youtube-play"></i></h2>
+    </div>
 
-  <div class="notice">📢 現在、お知らせはありません</div>
-</main>
+    <div class="notice">
+      📢 現在、お知らせはありません
+    </div>
+  </main>
 
-<!-- 横並びナビ -->
-<div class="quick-nav-horizontal">
-  <a href="index.html" title="トップページ"><i class="fa fa-home"></i></a>
-  <a href="video.html" title="研修動画"><i class="fa fa-youtube-play"></i></a>
-  <a href="docs.html" title="研修資料"><i class="fa fa-file-text"></i></a>
-  <a href="archive.html" title="研修会アーカイブ"><i class="fa fa-history"></i></a>
-</div>
-
-<footer>
-  <i class="fa fa-exclamation-triangle"></i>
-  <div>
-    職員内での情報管理ツールです。<br>
-    他者への公開等、情報の取扱いに注意してください。
-  </div>
-</footer>
+  <footer>
+    <div class="footer-left">
+      <i class="fa fa-exclamation-triangle"></i>
+      <div>
+        職員内での情報管理ツールです。<br>
+        他者への公開等、情報の取扱いに注意してください。
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">ページトップ</a>
+      <a href="video.html">研修動画</a>
+      <a href="docs.html">研修資料</a>
+      <a href="archive.html">研修会アーカイブ</a>
+    </div>
+  </footer>
 
 </body>
 </html>
