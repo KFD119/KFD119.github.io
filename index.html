@@ -20,48 +20,40 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
     }
     .title {
       font-size: 28px;
       font-weight: bold;
     }
     .header-menu {
-      display: flex;
-      gap: 15px;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: #87cefa;
+      padding: 10px;
+      width: 100%;
     }
     .header-menu a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 8px 0;
     }
     .header-menu a:hover {
       text-decoration: underline;
     }
     .toggle-btn {
-      display: none;
       background: #4682b4;
       color: white;
       border: none;
       padding: 5px 10px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 18px;
       border-radius: 4px;
     }
-    @media (max-width: 600px) {
-      .header-menu {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: #87cefa;
-        padding: 10px;
-        width: 100%;
-      }
-      .header-menu.open {
-        display: flex;
-      }
-      .toggle-btn {
-        display: block;
-      }
+    .header-menu.open {
+      display: flex;
     }
     main {
       padding: 20px;
@@ -123,7 +115,7 @@
 
   <header>
     <div class="title">救急担当学習掲示板</div>
-    <button class="toggle-btn">☰ タップで開く</button>
+    <button class="toggle-btn">☰</button>
     <div class="header-menu">
       <a href="#">ページトップ</a>
       <a href="kenshu-douga.html">研修動画</a>
